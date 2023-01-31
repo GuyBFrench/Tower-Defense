@@ -39,9 +39,6 @@ public class GameGrid : MonoBehaviour
                 
                 gameGrid[x, y].gameObject.name = "Grid Space ( x: " + x.ToString() + ", Y: " + y.ToString() + ")";
                 Vector3 tempv3 = new Vector3(x, y, 0);
-                Vector3Data temp = ScriptableObject.CreateInstance<Vector3Data>();
-                temp.value = (tempv3);
-                temp.name = "Grid space: " + x + ", " + y;
             }
         }
     }
