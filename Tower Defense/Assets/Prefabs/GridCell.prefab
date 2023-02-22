@@ -93,10 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8790671295391929976}
-  - component: {fileID: 1489853149066344750}
   - component: {fileID: 1994800765156341672}
-  - component: {fileID: 398127943191563302}
-  - component: {fileID: 8104949786057605717}
+  - component: {fileID: 116244799290769236}
   m_Layer: 8
   m_Name: GridCell
   m_TagString: Untagged
@@ -120,20 +118,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1489853149066344750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123497153385285915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a91b5d50037c8b8428e0090c57b034e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectInThisGridSpace: {fileID: 0}
-  isOccupied: 0
 --- !u!65 &1994800765156341672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,7 +131,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 1, z: 4}
   m_Center: {x: 2.5, y: 0, z: 2.5}
---- !u!114 &398127943191563302
+--- !u!114 &116244799290769236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,39 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8123497153385285915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec13d14e2576a9479195e37b4a98f19, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ddb00ef328eabd45a63a7b7e857f1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onClickEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8104949786057605717}
-        m_TargetAssemblyTypeName: PlacePrefab, Assembly-CSharp
-        m_MethodName: InstantiatePrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 975393865684672785, guid: 824403bac312c4842a4f267d23089628,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8104949786057605717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123497153385285915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0839891408f95724c80da27f629cdac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  prefab: {fileID: 975393865684672785, guid: 824403bac312c4842a4f267d23089628, type: 3}
-  onClickEvent:
-    m_PersistentCalls:
-      m_Calls: []

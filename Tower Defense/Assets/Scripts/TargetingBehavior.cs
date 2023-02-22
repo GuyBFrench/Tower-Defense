@@ -6,11 +6,12 @@ using UnityEngine;
 public class TargetingBehavior : MonoBehaviour
 {
     public Transform target;
-    GameObject[] enemies;
+    public List<GameObject> enemies;
     public float range = 15f;
     
     void Start()
     {
+        enemies = new List<GameObject>(); 
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -30,6 +31,17 @@ public class TargetingBehavior : MonoBehaviour
             target = nearestEnemy.transform;
         }
     }
+
+    void AddToList(GameObject obj)
+    {
+        enemies.Add(obj);
+    }
+    
+    void RemoveFromList(GameObject obj)
+    {
+        enemies.Remove(obj);
+    }
+    
     void Update()
     {
         if (target == null)
