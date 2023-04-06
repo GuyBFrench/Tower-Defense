@@ -12,24 +12,30 @@ public class TargetingBehavior : MonoBehaviour
     void Start()
     {
         enemies = new List<GameObject>(); 
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        //InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!enemies.Contains(other.gameObject))
+        {
+            enemies.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (enemies.Contains(other.gameObject))
+        {
+            enemies.Remove(other.gameObject);
+        }
     }
 
     void UpdateTarget()
     {
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-        foreach (GameObject enemy in enemies)
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
-
-            target = nearestEnemy.transform;
-        }
+        GameObject enemy = enemies[0];
+        target = enemy.transform;
+        
     }
 
     void AddToList(GameObject obj)
