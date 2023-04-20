@@ -7846,7 +7846,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   counterNum: {fileID: 11400000, guid: fc87775a961165546a58acca57bb75b1, type: 2}
-  seconds: 1
+  seconds: 3
 --- !u!4 &804031619
 Transform:
   m_ObjectHideFlags: 0
