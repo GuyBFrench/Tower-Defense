@@ -43,10 +43,10 @@ public class CameraManger : MonoBehaviour
             transform.position += position * Time.deltaTime;
         }
 
-        if (_isRotating)
+        /*if (_isRotating)
         {
             transform.Rotate(new Vector3(_xRotation, _delta.x *rotationSpeed, 0.0f));
             transform.rotation = Quaternion.Euler(_xRotation, transform.rotation.eulerAngles.y, 0.0f);
-        }
+        }*/
     }
 }
